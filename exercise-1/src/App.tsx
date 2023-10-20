@@ -31,7 +31,7 @@ function App() {
     <main>
      <aside>
       <h1>Prueba Tecnica</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} aria-label='Añadir elementos a la lista'>
         <label>
           Ingrese una frase
           <input name='newFrase' type="text"  placeholder='Amo la musica ♥️' required/>
@@ -48,7 +48,7 @@ function App() {
         {
           list.map(item=>{
             return <li key={item.id}>
-                <span>{item.text}</span>
+                {item.text}
                 <button onClick={()=>deleteItem(item.id)}>X</button>
             </li>
           })
